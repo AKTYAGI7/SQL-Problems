@@ -2,7 +2,7 @@
 (SELECT name AS results
 FROM MovieRating JOIN Users USING(user_id)
 GROUP BY name
-ORDER BY COUNT(*) DESC, name
+ORDER BY COUNT(user_id) DESC, name
 LIMIT 1)
 
 UNION ALL
